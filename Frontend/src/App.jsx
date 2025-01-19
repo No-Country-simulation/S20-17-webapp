@@ -1,38 +1,22 @@
-import { useState } from "react"
-import reactLogo from "./assets/react.svg"
-import viteLogo from "/vite.svg"
-import "./App.css"
-
 function App() {
-    const [count, setCount] = useState(0)
-
     return (
-        <>
-            <div>
-                <a href="https://vite.dev" target="_blank">
-                    <img src={viteLogo} className="logo" alt="Vite logo" />
-                </a>
-                <a href="https://react.dev" target="_blank">
-                    <img
-                        src={reactLogo}
-                        className="logo react"
-                        alt="React logo"
-                    />
-                </a>
-            </div>
-            <h1>Vite + React</h1>
-            <div className="card">
-                <button onClick={() => setCount((count) => count + 1)}>
-                    count is {count}
-                </button>
-                <p>
-                    Edit <code>src/App.jsx</code> and save to test HMR
-                </p>
-            </div>
-            <p className="read-the-docs">
-                Click on the Vite and React logos to learn more
-            </p>
-        </>
+        <div className="grid h-screen w-full grid-rows-[1fr_8fr_1fr] items-center bg-black text-white">
+            <header className="flex items-center justify-center border-b-2 border-b-white py-4">
+                <h1>AVANTI</h1>
+            </header>
+            <main className="grid place-items-center">
+                <div className="m-4 flex flex-col gap-4 rounded-[3rem] border-2 border-solid border-white p-8">
+                    <h2 className="">Se vienen cositas...</h2>
+                    <p>Un paso a la vez, todo se puede</p>
+                    <button className="min-h-12 min-w-12 rounded-2xl bg-white text-black hover:bg-lime-600 hover:text-white active:bg-gray-700 active:text-white">
+                        ¡Entendido!
+                    </button>
+                </div>
+            </main>
+            <footer className="flex items-center justify-center border-t-2 border-t-white py-4">
+                <h2>NoCountry | Equipo-s20-17-webapp</h2>
+            </footer>
+        </div>
     )
 }
 
