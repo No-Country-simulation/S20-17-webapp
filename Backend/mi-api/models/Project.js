@@ -6,7 +6,7 @@ const projectSchema = new mongoose.Schema({
     description: {type: String, required: true},
     category: {type: String, required: true},
     projectImg: {type: String, required: true},
-    projectStatus: {type: String, required: true, enum:['available','closed','pendingRevision'], default: available},
+    projectStatus: {type: String, required: true, enum:['available','closed','pendingRevision'], default: 'available'},
 }, {timestamps: true});
 
 export const Project = mongoose.model('Project', projectSchema);
