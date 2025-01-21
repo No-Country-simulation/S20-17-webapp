@@ -1,6 +1,8 @@
-import bcrypt from "bcryptjs";
+import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { User } from "../models/user.model.js";
+import { User } from "../models/User.js";
+import getDataUri from "../utils/datauri.js";
+import cloudinary from "../utils/cloudinary.js";
 
 export const register = async (req, res) => {
   try {
@@ -110,11 +112,33 @@ export const getProfile = async (req, res) => {
 };
 
 export const updateProfile = async (req, res) => {
-    try {
-        
-    } catch (error) {
-        console.log(error);
+  try {
+    const userId = req.id;
+    const profilePicture = req.file;
+    let cloudResponse;
+    if (profilePicture) {
+      const fileUri = getDataUri(profilePicture);
+      cloudResponse = await cloudinary.uploader.upload(fileUri);
     }
+
+    const user = await User.findById(userId);
+    if (!user) {
+      return res
+        .status(404)
+        .json({ message: "No existe un usuario con ese id", success: false });
+    }
+
+    
+    if (profilePicture) user.profilePicture = cloudResponse.secure_url;
+
+    await user.save();
+
+    return res
+      .status(200)
+      .json({ user, message: "Perfil actualizado", success: true });
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 export const deleteUser = async (req, res) => {
