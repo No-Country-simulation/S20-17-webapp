@@ -1,16 +1,18 @@
-const express = require('express');
-const path = require('path');
-const cookieParser = require('cookie-parser');
-const logger = require('morgan');
-const dotenv = require('dotenv');
-const connectDB = require('./config/db');
+
+import express from 'express';
+import path from 'path';
+import cookieParser from 'cookie-parser';
+import logger from 'morgan';
+import dotenv from 'dotenv';
+import connectDB from './config/db.js';
 
 dotenv.config();
 
 connectDB();
 
-const indexRouter = require('./routes/indexRoutes');
-const usersRouter = require('./routes/userRoutes');
+import indexRouter from './routes/indexRoutes.js';
+import usersRouter from './routes/userRoutes.js';
+
 
 const app = express();
 
@@ -20,6 +22,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/user', usersRouter);
 
-module.exports = app;
+
+
+export default app;
