@@ -1,6 +1,6 @@
 import { LoginForm, AuthFooter, AuthHeader } from "../../components"
 
-export function LoginPage() {
+export function UserLoginPage() {
     return (
         <div
             className="grid h-screen w-full grid-rows-[1fr_8fr_1fr] items-center overflow-y-scroll bg-black text-white"
