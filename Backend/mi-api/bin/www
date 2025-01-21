@@ -4,9 +4,11 @@
  * Module dependencies.
  */
 
-import app from '../app';
-const debug = require('debug')('mi-api:server');
-const http = require('http');
+import app from '../app.js';
+import createDebug from 'debug';
+const debug = createDebug('mi-api:server');
+import http from 'http';
+
 
 /**
  * Get port from environment and store in Express.
