@@ -1,4 +1,5 @@
 import { LoginForm, AuthFooter, AuthHeader } from "../../components"
+import { Link } from "react-router-dom"
 
 export function UserLoginPage() {
     return (
@@ -34,7 +35,7 @@ export function UserLoginPage() {
                     <p className="mx-auto">
                         ¿Aún no tienes cuenta en Avanti?
                         <span>
-                            <a href=""> Regístrate</a>
+                            <Link to="/register"> Regístrate</Link>
                         </span>
                     </p>
                 </div>
