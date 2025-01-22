@@ -1,4 +1,5 @@
 import { RegisterForm, AuthFooter, AuthHeader } from "../../components"
+import { Link } from "react-router-dom"
 
 export function UserRegisterPage() {
     return (
@@ -11,18 +12,18 @@ export function UserRegisterPage() {
                 "--c2": "#d9d9d9",
                 "--c3": "#3c3c3c",
                 background: `
-                        repeating-conic-gradient(
-                            from 30deg,
-                            #0000 0 120deg,
-                            var(--c3) 0 180deg
-                        )
-                        calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
-                        repeating-conic-gradient(
-                            from 30deg,
-                            var(--c1) 0 60deg,
-                            var(--c2) 0 120deg,
-                            var(--c3) 0 180deg
-                        )`,
+                    repeating-conic-gradient(
+                        from 30deg,
+                        #0000 0 120deg,
+                        var(--c3) 0 180deg
+                    )
+                    calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+                    repeating-conic-gradient(
+                        from 30deg,
+                        var(--c1) 0 60deg,
+                        var(--c2) 0 120deg,
+                        var(--c3) 0 180deg
+                    )`,
                 backgroundSize: "var(--s) calc(var(--s) * 0.577)",
             }}
         >
@@ -34,7 +35,7 @@ export function UserRegisterPage() {
                     <p className="mx-auto">
                         ¿Tienes una cuenta?
                         <span>
-                            <a href=""> ¡Inicia sesión aquí!</a>
+                            <Link to="/login"> ¡Inicia sesión aquí!</Link>
                         </span>
                     </p>
                 </div>
