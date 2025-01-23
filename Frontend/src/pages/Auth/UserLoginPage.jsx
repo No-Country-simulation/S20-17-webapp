@@ -32,17 +32,17 @@ export function UserLoginPage() {
                 <div className="m-4 flex flex-col gap-4 rounded-6xl border-2 border-solid border-white bg-[#121212F0] p-8">
                     <h1 className="mx-auto">Inicia sesión en Avanti</h1>
                     <LoginForm />
-                    <p className="mx-auto mb-4">
-                        ¿Olvidaste tu contraseña?
-                        <span>
-                            <Link to="/recovery"> Recupérala</Link>
-                        </span>
+                    <p className="mb-4 grid min-h-12 min-w-12 place-items-center">
+                        <Link to="/recovery">
+                            ¿Olvidaste tu contraseña?
+                            <span> Recupérala</span>
+                        </Link>
                     </p>
-                    <p className="mx-auto">
-                        ¿Aún no tienes cuenta en Avanti?
-                        <span>
-                            <Link to="/register"> Regístrate</Link>
-                        </span>
+                    <p className="grid min-h-12 min-w-12 place-items-center">
+                        <Link to="/register">
+                            ¿Aún no tienes cuenta en Avanti?
+                            <span> Regístrate</span>
+                        </Link>
                     </p>
                 </div>
             </main>
