@@ -4,12 +4,12 @@ import { Link } from "react-router-dom"
 export function UserLoginPage() {
     return (
         <div
-            className="grid h-screen w-full grid-rows-[1fr_8fr_1fr] items-center overflow-y-scroll bg-black text-white"
+            className="grid min-h-screen w-full grid-rows-[1fr_8fr_1fr] items-center bg-black text-white"
             style={{
                 // https://uiverse.io/csemszepp/modern-zebra-66
                 "--s": "90px", // Tamaño
                 "--c1": "#121212",
-                "--c2": "#d9d9d9",
+                "--c2": "#f2f2f2",
                 "--c3": "#3c3c3c",
                 background: `
                     repeating-conic-gradient(
