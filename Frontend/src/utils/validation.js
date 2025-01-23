@@ -1,5 +1,5 @@
 export const validatePassword = (password) => {
-    const regex = "/^(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[@#$%^&+=!]).{8,}$/"
+    const regex = /^(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[@#$%^&+=!]).{8,}$/
 
     /*
         Desglose de la Expresión Regular:
