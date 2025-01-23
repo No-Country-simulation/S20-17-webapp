@@ -42,7 +42,7 @@ export function RegisterForm() {
                 type="submit"
                 className="w-full rounded-2xl bg-[linear-gradient(92deg,_#1f497d,_#2e806e,_#005839)] bg-[length:200%_200%] bg-left p-3 font-medium text-white shadow-md transition-[background-position] duration-500 ease-in-out hover:bg-right focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
-                {registerInProcess ? "AGUARDA UNOS INSTANTES" : "Registrarse en ByteWise"}
+                {registerInProcess ? "AGUARDA UNOS INSTANTES" : "Registrarse en Avanti"}
             </button>
         </form>
     )
