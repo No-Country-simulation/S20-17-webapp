@@ -35,7 +35,10 @@ export function UserRegisterPage() {
                     <p className="grid min-h-12 min-w-12 place-items-center">
                         <Link to="/login">
                             ¿Tienes una cuenta?
-                            <span> ¡Inicia sesión aquí!</span>
+                            <span className="bg-gradient-avanti bg-clip-text font-bold text-transparent">
+                                {" "}
+                                ¡Inicia sesión aquí!
+                            </span>
                         </Link>
                     </p>
                 </div>
