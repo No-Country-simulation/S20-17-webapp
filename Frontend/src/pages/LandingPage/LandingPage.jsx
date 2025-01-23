@@ -11,12 +11,12 @@ export function LandingPage() {
                     <h2 className="">Se vienen cositas...</h2>
                     <p>Un paso a la vez, todo se puede</p>
                     <button
-                        className="grid min-h-12 min-w-12 place-items-center rounded-2xl bg-white bg-[linear-gradient(92deg,_#1f497d,_#2e806e,_#005839)] bg-[length:200%_200%] bg-left text-white shadow-md transition-[background-position] duration-500 ease-in-out hover:bg-right"
+                        className="bg-gradient-avanti grid min-h-12 min-w-12 place-items-center rounded-2xl bg-white bg-[length:200%_200%] bg-left text-white shadow-md transition-[background-position] duration-500 ease-in-out hover:bg-right"
                         tabIndex={-1}
                     >
                         <Link
                             to="./login"
-                            className="grid h-full w-full place-items-center rounded-2xl focus:outline-none focus:ring-2 focus:ring-offset-2"
+                            className="focus:ring-avanti-light-green grid h-full w-full place-items-center rounded-2xl focus:outline-none focus:ring-2"
                             tabIndex={0}
                         >
                             {" "}
