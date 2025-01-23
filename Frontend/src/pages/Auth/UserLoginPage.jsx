@@ -29,11 +29,14 @@ export function UserLoginPage() {
         >
             <AuthHeader />
             <main className="grid place-items-center">
-                <div className="m-4 flex flex-col gap-4 rounded-6xl border-2 border-solid border-white bg-[#f2f2f2F0] p-8 text-black">
+                <div className="border-avanti-black m-4 flex flex-col gap-4 rounded-6xl border-2 border-solid bg-[#f2f2f2F0] p-8 text-black">
                     <h1 className="mx-auto">Inicia sesión en Avanti</h1>
                     <LoginForm />
                     <p className="mb-4 grid min-h-12 min-w-12 place-items-center">
-                        <Link to="/recovery">
+                        <Link
+                            to="/recovery"
+                            className="focus:border-avanti-light-green focus:ring-avanti-light-green flex h-full w-full items-center justify-center gap-[1ch] rounded-2xl focus:outline-none focus:ring-2"
+                        >
                             ¿Olvidaste tu contraseña?
                             <span className="bg-gradient-avanti bg-clip-text font-bold text-transparent">
                                 {" "}
@@ -42,7 +45,10 @@ export function UserLoginPage() {
                         </Link>
                     </p>
                     <p className="grid min-h-12 min-w-12 place-items-center">
-                        <Link to="/register">
+                        <Link
+                            to="/register"
+                            className="focus:border-avanti-light-green focus:ring-avanti-light-green flex h-full w-full items-center gap-[1ch] rounded-2xl focus:outline-none focus:ring-2"
+                        >
                             ¿Aún no tienes cuenta en Avanti?
                             <span className="bg-gradient-avanti bg-clip-text font-bold text-transparent">
                                 {" "}
