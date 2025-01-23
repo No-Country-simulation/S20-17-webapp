@@ -1,11 +1,21 @@
 export function LandingPageHeader() {
     return (
         <>
-            <header className="body-font text-gray-600 bg-[#f2f2f2]">
-                <div className=" mx-auto flex flex-col flex-wrap items-center justify-around p-5 md:flex-row">
+            <div className="body-font text-gray-600">
+                <div className="container mx-auto flex flex-col flex-wrap items-center  md:flex-row">
                     <a className="title-font mb-4 flex items-center font-medium text-gray-900 md:mb-0">
-                        <img src="logo.png" alt="Logo de Avanti" />
+                    <a className="title-font mb-4 flex items-center font-medium text-gray-900 md:mb-0">
+                        <img src="logo-1.png" alt="Logo de Avanti" />
                     </a>
+                    </a>
+                    <nav className="flex flex-wrap items-center justify-center cursor-pointer md:ml-auto text-lg font-semibold text-[#121212]">
+                        <a className="mr-5 hover:text-[#1F497D]">Registro</a>
+                        <a className="mr-5 hover:text-[#1F497D]">Login</a>
+                    </nav>
+                </div>
+            </div>
+            <header className="body-font bg-[#f2f2f2] text-gray-600">
+                <div className="mx-auto flex flex-col flex-wrap items-center justify-around gap-8 p-5">
                     <div className="relative">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -26,38 +36,24 @@ export function LandingPageHeader() {
                             placeholder="Search Crowdfunding"
                         />
                     </div>
-                    <nav className="flex flex-wrap items-center justify-center text-base">
-                        <a className="mr-5 hover:text-gray-900">First Link</a>
-                        <a className="mr-5 hover:text-gray-900">Second Link</a>
-                        <a className="mr-5 hover:text-gray-900">Third Link</a>
-                        <a className="mr-5 hover:text-gray-900">Fourth Link</a>
+                    <nav className="flex cursor-pointer flex-wrap items-center justify-center text-lg font-semibold text-[#121212]">
+                        <a className="mr-5 hover:text-[#1F497D]">First Link</a>
+                        <a className="mr-5 hover:text-[#1F497D]">Second Link</a>
+                        <a className="mr-5 hover:text-[#1F497D]">Third Link</a>
+                        <a className="mr-5 hover:text-[#1F497D]">Fourth Link</a>
                     </nav>
-                    {/* <button className="mt-4 inline-flex items-center rounded border-0 bg-gray-100 px-3 py-1 text-base hover:bg-gray-200 focus:outline-none md:mt-0">
-                        Start a Campaign
-                        <svg
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            className="ml-1 h-4 w-4"
-                            viewBox="0 0 24 24"
-                        >
-                            <path d="M5 12h14M12 5l7 7-7 7"></path>
-                        </svg>
-                    </button> */}
-                    <div class="flex items-center justify-center">
-                        <div class="group relative">
-                            <button class="relative inline-block cursor-pointer rounded-xl bg-[#121212] p-px font-semibold leading-6 text-white shadow-2xl shadow-zinc-900 transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95">
-                                <span class="absolute inset-0 rounded-xl bg-gradient-to-r from-teal-400 via-blue-500 to-purple-500 p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
+                    <div className="flex items-center justify-center">
+                        <div className="group relative">
+                            <button className="relative inline-block cursor-pointer rounded-xl bg-[#121212] p-px font-semibold leading-6 text-white shadow-2xl shadow-zinc-900 transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95">
+                                <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-teal-400 via-blue-500 to-purple-500 p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
 
-                                <span class="relative z-10 block rounded-xl bg-gray-950 px-6 py-3">
-                                    <div class="relative z-10 flex items-center space-x-2">
-                                        <span class="transition-all duration-500 group-hover:translate-x-1">
-                                        Start a Campaign
+                                <span className="relative z-10 block rounded-xl bg-gray-950 px-6 py-3">
+                                    <div className="relative z-10 flex items-center space-x-2">
+                                        <span className="transition-all duration-500 group-hover:translate-x-1">
+                                            Start a Campaign
                                         </span>
                                         <svg
-                                            class="h-6 w-6 transition-transform duration-500 group-hover:translate-x-1"
+                                            className="h-6 w-6 transition-transform duration-500 group-hover:translate-x-1"
                                             data-slot="icon"
                                             aria-hidden="true"
                                             fill="currentColor"

@@ -28,8 +28,9 @@ export function LandingPageContent() {
 
     return (
         <>
-            <section className="body-font text-gray-600">
-                <div className="container mx-auto px-5 py-24">
+            <main className="body-font text-gray-600">
+                <section className="container mx-auto px-5 py-14">
+                    <h1 className="container flex justify-center text-[#1F497D] py-5 mb-8 text-4xl font-semibold">Proyectos</h1>
                     <div className="-m-4 flex flex-wrap">
                         {cards.map((card) => (
                             <div key={card.id} className="p-4 md:w-1/3">
@@ -48,7 +49,7 @@ export function LandingPageContent() {
                                         </h1>
                                         <p className="mb-3 leading-relaxed">{card.description}</p>
                                         <div className="flex flex-wrap items-center">
-                                            <a className="inline-flex items-center text-indigo-500 md:mb-2 lg:mb-0">
+                                            <a className="inline-flex items-center text-[#1F497D] md:mb-2 lg:mb-0 cursor-pointer">
                                                 Learn More
                                                 <svg
                                                     className="ml-2 h-4 w-4"
@@ -69,8 +70,8 @@ export function LandingPageContent() {
                             </div>
                         ))}
                     </div>
-                </div>
-            </section>
+                </section>
+            </main>
         </>
     )
 }
