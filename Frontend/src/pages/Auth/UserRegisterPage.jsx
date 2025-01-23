@@ -8,9 +8,9 @@ export function UserRegisterPage() {
             style={{
                 // https://uiverse.io/csemszepp/modern-zebra-66
                 "--s": "90px", // Tamaño
-                "--c1": "#121212",
-                "--c2": "#d9d9d9",
-                "--c3": "#3c3c3c",
+                "--c1": "#005839",
+                "--c2": "#f2f2f2",
+                "--c3": "#2e806e",
                 background: `
                     repeating-conic-gradient(
                         from 30deg,
@@ -29,7 +29,7 @@ export function UserRegisterPage() {
         >
             <AuthHeader />
             <main className="grid place-items-center">
-                <div className="m-4 flex flex-col gap-4 rounded-6xl border-2 border-solid border-white bg-[#121212F0] p-8">
+                <div className="border-avanti-black m-4 flex flex-col gap-4 rounded-6xl border-2 border-solid bg-[#f2f2f2f0] p-8 text-black">
                     <h1 className="mx-auto">¡Regístrate en Avanti!</h1>
                     <RegisterForm />
                     <p className="grid min-h-12 min-w-12 place-items-center">
