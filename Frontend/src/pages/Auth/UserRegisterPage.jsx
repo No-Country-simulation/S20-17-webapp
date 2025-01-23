@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 export function UserRegisterPage() {
     return (
         <div
-            className="grid h-screen w-full grid-rows-[1fr_8fr_1fr] items-center overflow-y-scroll bg-black text-white"
+            className="grid min-h-screen w-full grid-rows-[1fr_8fr_1fr] items-center bg-black text-white"
             style={{
                 // https://uiverse.io/csemszepp/modern-zebra-66
                 "--s": "90px", // Tamaño
