@@ -29,19 +29,25 @@ export function UserLoginPage() {
         >
             <AuthHeader />
             <main className="grid place-items-center">
-                <div className="m-4 flex flex-col gap-4 rounded-6xl border-2 border-solid border-white bg-[#121212F0] p-8">
+                <div className="m-4 flex flex-col gap-4 rounded-6xl border-2 border-solid border-white bg-[#f2f2f2F0] p-8 text-black">
                     <h1 className="mx-auto">Inicia sesión en Avanti</h1>
                     <LoginForm />
                     <p className="mb-4 grid min-h-12 min-w-12 place-items-center">
                         <Link to="/recovery">
                             ¿Olvidaste tu contraseña?
-                            <span> Recupérala</span>
+                            <span className="bg-gradient-avanti bg-clip-text font-bold text-transparent">
+                                {" "}
+                                ¡Recupérala!
+                            </span>
                         </Link>
                     </p>
                     <p className="grid min-h-12 min-w-12 place-items-center">
                         <Link to="/register">
                             ¿Aún no tienes cuenta en Avanti?
-                            <span> Regístrate</span>
+                            <span className="bg-gradient-avanti bg-clip-text font-bold text-transparent">
+                                {" "}
+                                ¡Regístrate!
+                            </span>
                         </Link>
                     </p>
                 </div>
