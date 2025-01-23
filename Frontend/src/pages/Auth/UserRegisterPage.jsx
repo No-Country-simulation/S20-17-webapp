@@ -33,7 +33,10 @@ export function UserRegisterPage() {
                     <h1 className="mx-auto">¡Regístrate en Avanti!</h1>
                     <RegisterForm />
                     <p className="grid min-h-12 min-w-12 place-items-center">
-                        <Link to="/login">
+                        <Link
+                            to="/login"
+                            className="focus:border-avanti-light-green focus:ring-avanti-light-green flex h-full w-full items-center gap-[1ch] rounded-2xl focus:outline-none focus:ring-2"
+                        >
                             ¿Tienes una cuenta?
                             <span className="bg-gradient-avanti bg-clip-text font-bold text-transparent">
                                 {" "}

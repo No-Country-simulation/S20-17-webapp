@@ -40,7 +40,7 @@ export function RegisterForm() {
             />
             <button
                 type="submit"
-                className="focus:ring-avanti-light-green w-full rounded-2xl bg-[linear-gradient(92deg,_#1f497d,_#2e806e,_#005839)] bg-[length:200%_200%] bg-left p-3 font-medium text-white shadow-md transition-[background-position] duration-500 ease-in-out hover:bg-right focus:outline-none focus:ring-2 focus:ring-offset-2"
+                className="focus:border-avanti-light-green focus:ring-avanti-light-green bg-gradient-avanti w-full rounded-2xl bg-[length:200%_200%] bg-left p-3 font-medium text-white shadow-md transition-[background-position] duration-500 ease-in-out hover:bg-right focus:border-none focus:outline-none focus:ring-2"
             >
                 {registerInProcess ? "AGUARDA UNOS INSTANTES" : "Registrarse en Avanti"}
             </button>
