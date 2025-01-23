@@ -10,8 +10,15 @@ export function LandingPage() {
                 <div className="border-avanti-light-green m-4 flex flex-col gap-4 rounded-6xl border-2 border-solid p-8">
                     <h2 className="">Se vienen cositas...</h2>
                     <p>Un paso a la vez, todo se puede</p>
-                    <button className="grid min-h-12 min-w-12 place-items-center rounded-2xl bg-white bg-[linear-gradient(92deg,_#1f497d,_#2e806e,_#005839)] bg-[length:200%_200%] bg-left text-white shadow-md transition-[background-position] duration-500 ease-in-out hover:bg-lime-600 hover:bg-right focus:outline-none focus:ring-2 focus:ring-offset-2 active:bg-gray-700 active:text-white">
-                        <Link to="./login" className="grid h-full w-full place-items-center">
+                    <button
+                        className="grid min-h-12 min-w-12 place-items-center rounded-2xl bg-white bg-[linear-gradient(92deg,_#1f497d,_#2e806e,_#005839)] bg-[length:200%_200%] bg-left text-white shadow-md transition-[background-position] duration-500 ease-in-out hover:bg-right"
+                        tabIndex={-1}
+                    >
+                        <Link
+                            to="./login"
+                            className="grid h-full w-full place-items-center rounded-2xl focus:outline-none focus:ring-2 focus:ring-offset-2"
+                            tabIndex={0}
+                        >
                             {" "}
                             ¡Entendido!
                         </Link>
