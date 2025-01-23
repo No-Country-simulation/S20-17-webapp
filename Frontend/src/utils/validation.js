@@ -1,5 +1,17 @@
 export const validatePassword = (password) => {
-    const regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!]).{8,}$/
+    const regex = "/^(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[@#$%^&+=!]).{8,}$/"
+
+    /*
+        Desglose de la Expresión Regular:
+            ^: Comienzo de la línea.
+            (?=.\d): Al menos un dígito.
+            (?=.[a-z]): Al menos una letra minúscula.
+            (?=.[A-Z]): Al menos una letra mayúscula.
+            (?=.[@#$%^&+=!]): Al menos un carácter especial (de los listados).
+            .{8,}: Al menos 8 caracteres en total.
+            $: Fin de la línea.
+    */
+
     return regex.test(password)
 }
 
