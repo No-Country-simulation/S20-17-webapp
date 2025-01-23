@@ -3,6 +3,14 @@ export default {
     content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
     theme: {
         extend: {
+            colors: {
+                "avanti-black": "#121212",
+                "avanti-blue": "#1f497d",
+                "avanti-green": "#005839",
+                "avanti-light-green": "#2e806e",
+                "avanti-red": "#860a24",
+                "avanti-white": "#f2f2f2",
+            },
             borderRadius: {
                 "4xl": "2rem",
                 "6xl": "3rem",
