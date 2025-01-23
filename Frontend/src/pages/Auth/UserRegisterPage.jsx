@@ -32,11 +32,11 @@ export function UserRegisterPage() {
                 <div className="m-4 flex flex-col gap-4 rounded-6xl border-2 border-solid border-white bg-[#121212F0] p-8">
                     <h1 className="mx-auto">¡Regístrate en Avanti!</h1>
                     <RegisterForm />
-                    <p className="mx-auto">
-                        ¿Tienes una cuenta?
-                        <span>
-                            <Link to="/login"> ¡Inicia sesión aquí!</Link>
-                        </span>
+                    <p className="grid min-h-12 min-w-12 place-items-center">
+                        <Link to="/login">
+                            ¿Tienes una cuenta?
+                            <span> ¡Inicia sesión aquí!</span>
+                        </Link>
                     </p>
                 </div>
             </main>
