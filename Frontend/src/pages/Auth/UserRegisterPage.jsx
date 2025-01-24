@@ -1,41 +1,48 @@
 import { RegisterForm, AuthFooter, AuthHeader } from "../../components"
+import { Link } from "react-router-dom"
 
 export function UserRegisterPage() {
     return (
         <div
-            className="grid h-screen w-full grid-rows-[1fr_8fr_1fr] items-center overflow-y-scroll bg-black text-white"
+            className="grid min-h-screen w-full grid-rows-[1fr_8fr_1fr] items-center bg-black text-white"
             style={{
                 // https://uiverse.io/csemszepp/modern-zebra-66
                 "--s": "90px", // Tamaño
-                "--c1": "#121212",
-                "--c2": "#d9d9d9",
-                "--c3": "#3c3c3c",
+                "--c1": "#005839",
+                "--c2": "#f2f2f2",
+                "--c3": "#2e806e",
                 background: `
-                        repeating-conic-gradient(
-                            from 30deg,
-                            #0000 0 120deg,
-                            var(--c3) 0 180deg
-                        )
-                        calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
-                        repeating-conic-gradient(
-                            from 30deg,
-                            var(--c1) 0 60deg,
-                            var(--c2) 0 120deg,
-                            var(--c3) 0 180deg
-                        )`,
+                    repeating-conic-gradient(
+                        from 30deg,
+                        #0000 0 120deg,
+                        var(--c3) 0 180deg
+                    )
+                    calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+                    repeating-conic-gradient(
+                        from 30deg,
+                        var(--c1) 0 60deg,
+                        var(--c2) 0 120deg,
+                        var(--c3) 0 180deg
+                    )`,
                 backgroundSize: "var(--s) calc(var(--s) * 0.577)",
             }}
         >
             <AuthHeader />
             <main className="grid place-items-center">
-                <div className="m-4 flex flex-col gap-4 rounded-6xl border-2 border-solid border-white bg-[#121212F0] p-8">
+                <div className="border-avanti-black m-4 flex flex-col gap-4 rounded-6xl border-2 border-solid bg-[#f2f2f2f0] p-8 text-black">
                     <h1 className="mx-auto">¡Regístrate en Avanti!</h1>
                     <RegisterForm />
-                    <p className="mx-auto">
-                        ¿Tienes una cuenta?
-                        <span>
-                            <a href=""> ¡Inicia sesión aquí!</a>
-                        </span>
+                    <p className="grid min-h-12 min-w-12 place-items-center">
+                        <Link
+                            to="/login"
+                            className="focus:border-avanti-light-green focus:ring-avanti-light-green flex h-full w-full items-center gap-[1ch] rounded-2xl focus:outline-none focus:ring-2"
+                        >
+                            ¿Tienes una cuenta?
+                            <span className="bg-gradient-avanti bg-clip-text font-bold text-transparent">
+                                {" "}
+                                ¡Inicia sesión aquí!
+                            </span>
+                        </Link>
                     </p>
                 </div>
             </main>
