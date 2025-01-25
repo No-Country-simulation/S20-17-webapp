@@ -12,6 +12,6 @@ router.post('/login', userController.login);
 router.get('/logout', userController.logout);
 router.get('/userProfile/:id', userController.getProfile);
 router.post('/userUpdate/:id', userController.updateProfile);
-router.delete('/userDelete/:id', userController.deleteUser);
+router.get('/userDelete/:id', userController.deleteUser);
 
 export default router;
