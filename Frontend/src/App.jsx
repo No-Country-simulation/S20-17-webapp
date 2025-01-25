@@ -1,9 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { LandingPage, UserLoginPage, UserRegisterPage, WIPPage } from "./pages"
+import { ErrorPage, LandingPage, UserLoginPage, UserRegisterPage, WIPPage } from "./pages"
 
 function App() {
-    const ERROR_MESSAGE = "¡UPS! Esa página no existe..."
-
     return (
         <BrowserRouter>
             <Routes>
@@ -19,7 +17,7 @@ function App() {
                 <Route path="/contact" element={<WIPPage />} />
                 <Route path="/tips" element={<WIPPage />} />
                 <Route path="/process" element={<WIPPage />} />
-                <Route path="*" element={<h2>{ERROR_MESSAGE}</h2>} />
+                <Route path="*" element={<ErrorPage />} />
             </Routes>
         </BrowserRouter>
     )
