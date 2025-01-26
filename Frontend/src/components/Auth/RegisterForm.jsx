@@ -9,13 +9,28 @@ export function RegisterForm() {
         formState: { errors },
         watch,
     } = useForm()
+
     const [registerInProcess, setRegisterInProcess] = useState(false)
+
+    const sendData = (data) => {
+        const PAYLOAD = {
+            name: data.name,
+            email: data.email,
+            password: data.password,
+        }
+
+        console.log(JSON.stringify(PAYLOAD))
+        setRegisterInProcess(false)
+    }
 
     return (
         <form
             className="flex w-full flex-col items-center"
             id="registerForm"
-            onSubmit={handleSubmit((data) => console.log(JSON.stringify(data)))}
+            onSubmit={handleSubmit((data) => {
+                setRegisterInProcess(true)
+                setTimeout(() => sendData(data), 2000)
+            })}
         >
             <input
                 id="registerFormName"
