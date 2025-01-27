@@ -10,8 +10,10 @@ dotenv.config();
 
 connectDB();
 
-import indexRouter from './routes/indexRoutes.js';
+
 import usersRouter from './routes/userRoutes.js';
+import commentsRouter from './routes/commentRoutes.js';
+import contributionsRouter from './routes/contributionRoutes.js';
 
 
 const app = express();
@@ -21,8 +23,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use('/', indexRouter);
+
 app.use('/user', usersRouter);
+app.use('/comments', commentsRouter);
+app.use('/contributions', contributionsRouter);
 
 
 
