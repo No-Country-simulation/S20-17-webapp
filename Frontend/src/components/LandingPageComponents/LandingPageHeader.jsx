@@ -5,7 +5,7 @@ export function LandingPageHeader() {
         <>
             <div className="body-font h-20 text-gray-600">
                 <div className="flex h-full flex-wrap justify-between p-4">
-                    <img src="avanti-logo.svg" alt="Logo de Avanti" className="h-full" />
+                    <img src="src/assets/avanti-logo.svg" alt="Logo de Avanti" className="h-full" />
                     <nav className="mr-4 flex cursor-pointer flex-wrap items-center justify-center gap-4 text-lg font-semibold text-avanti-black">
                         <Link
                             to="./register"
@@ -26,7 +26,7 @@ export function LandingPageHeader() {
                 <div className="mx-auto flex flex-col flex-wrap items-center justify-around gap-8 p-5">
                     <div className="relative">
                         <img
-                            src="./avanti-icon-search.svg"
+                            src="src/assets/avanti-icon-search.svg"
                             alt="icono de búsqueda"
                             className="absolute bottom-2 left-2 ml-1 h-4 w-4"
                         />
@@ -53,7 +53,7 @@ export function LandingPageHeader() {
                                             Start a Campaign
                                         </span>
                                         <img
-                                            src="./avanti-icon-chevron.svg"
+                                            src="src/assets/avanti-icon-chevron.svg"
                                             alt="Icono empezar una campaña"
                                             className="h-6 w-6 transition-transform duration-500 group-hover:translate-x-1"
                                         />
