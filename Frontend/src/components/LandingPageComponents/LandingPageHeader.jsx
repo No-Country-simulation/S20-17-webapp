@@ -3,18 +3,20 @@ import { Link } from "react-router-dom"
 export function LandingPageHeader() {
     return (
         <>
-            <div className="body-font h-16 text-gray-600">
-                <div className="container mx-auto flex flex-col flex-wrap items-center md:flex-row">
-                    <a className="title-font mb-4 flex items-center font-medium text-gray-900 md:mb-0">
-                        <a className="title-font mb-4 flex items-center font-medium text-gray-900 md:mb-0">
-                            <img src="logo-2.png" alt="Logo de Avanti" />
-                        </a>
-                    </a>
-                    <nav className="flex cursor-pointer flex-wrap items-center justify-center text-lg font-semibold text-[#121212] md:ml-auto">
-                        <Link to="./register" className="mr-5 hover:text-[#1F497D]">
+            <div className="body-font h-20 text-gray-600">
+                <div className="flex h-full flex-wrap justify-between p-4">
+                    <img src="avanti-logo.svg" alt="Logo de Avanti" className="h-full" />
+                    <nav className="mr-4 flex cursor-pointer flex-wrap items-center justify-center gap-4 text-lg font-semibold text-avanti-black">
+                        <Link
+                            to="./register"
+                            className="grid min-h-12 min-w-20 place-items-center rounded-2xl hover:text-avanti-blue hover:ring-2 hover:ring-avanti-blue"
+                        >
                             Registro
                         </Link>
-                        <Link to="./login" className="mr-5 hover:text-[#1F497D]">
+                        <Link
+                            to="./login"
+                            className="grid min-h-12 min-w-20 place-items-center rounded-2xl hover:text-avanti-blue hover:ring-2 hover:ring-avanti-blue"
+                        >
                             Login
                         </Link>
                     </nav>
