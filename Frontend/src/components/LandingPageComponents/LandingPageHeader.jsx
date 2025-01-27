@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 export function LandingPageHeader() {
     return (
         <>
-            <div className="body-font h-20 text-gray-600">
+            <div className="body-font h-20 text-black">
                 <div className="flex h-full flex-wrap justify-between p-4">
                     <img src="src/assets/avanti-logo.svg" alt="Logo de Avanti" className="h-full" />
                     <nav className="mr-4 flex cursor-pointer flex-wrap items-center justify-center gap-4 text-lg font-semibold text-avanti-black">
@@ -37,10 +37,10 @@ export function LandingPageHeader() {
                         />
                     </div>
                     <nav className="flex cursor-pointer flex-wrap items-center justify-center text-lg font-semibold text-[#121212]">
-                        <a className="mr-5 hover:text-[#1F497D]">First Link</a>
-                        <a className="mr-5 hover:text-[#1F497D]">Second Link</a>
-                        <a className="mr-5 hover:text-[#1F497D]">Third Link</a>
-                        <a className="mr-5 hover:text-[#1F497D]">Fourth Link</a>
+                        <Link className="mr-5 hover:text-[#1F497D]">First Link</Link>
+                        <Link className="mr-5 hover:text-[#1F497D]">Second Link</Link>
+                        <Link className="mr-5 hover:text-[#1F497D]">Third Link</Link>
+                        <Link className="mr-5 hover:text-[#1F497D]">Fourth Link</Link>
                     </nav>
                     <div className="flex items-center justify-center">
                         <div className="group relative">
