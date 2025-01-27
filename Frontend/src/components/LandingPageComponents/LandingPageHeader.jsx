@@ -1,16 +1,22 @@
+import { Link } from "react-router-dom"
+
 export function LandingPageHeader() {
     return (
         <>
-            <div className="body-font text-gray-600 h-16">
-                <div className="container mx-auto flex flex-col flex-wrap items-center  md:flex-row">
+            <div className="body-font h-16 text-gray-600">
+                <div className="container mx-auto flex flex-col flex-wrap items-center md:flex-row">
                     <a className="title-font mb-4 flex items-center font-medium text-gray-900 md:mb-0">
-                    <a className="title-font mb-4 flex items-center font-medium text-gray-900 md:mb-0">
-                        <img src="logo-2.png" alt="Logo de Avanti" />
+                        <a className="title-font mb-4 flex items-center font-medium text-gray-900 md:mb-0">
+                            <img src="logo-2.png" alt="Logo de Avanti" />
+                        </a>
                     </a>
-                    </a>
-                    <nav className="flex flex-wrap items-center justify-center cursor-pointer md:ml-auto text-lg font-semibold text-[#121212]">
-                        <a className="mr-5 hover:text-[#1F497D]">Registro</a>
-                        <a className="mr-5 hover:text-[#1F497D]">Login</a>
+                    <nav className="flex cursor-pointer flex-wrap items-center justify-center text-lg font-semibold text-[#121212] md:ml-auto">
+                        <Link to="./register" className="mr-5 hover:text-[#1F497D]">
+                            Registro
+                        </Link>
+                        <Link to="./login" className="mr-5 hover:text-[#1F497D]">
+                            Login
+                        </Link>
                     </nav>
                 </div>
             </div>
