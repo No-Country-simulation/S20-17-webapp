@@ -29,13 +29,13 @@ export function UserRegisterPage() {
         >
             <AuthHeader />
             <main className="grid place-items-center">
-                <div className="border-avanti-black m-4 flex flex-col gap-4 rounded-6xl border-2 border-solid bg-[#f2f2f2f0] p-8 text-black">
+                <div className="m-4 flex min-w-96 flex-col gap-4 rounded-6xl border-2 border-solid border-avanti-black bg-[#f2f2f2f0] p-8 text-black">
                     <h1 className="mx-auto">¡Regístrate en Avanti!</h1>
                     <RegisterForm />
                     <p className="grid min-h-12 min-w-12 place-items-center">
                         <Link
                             to="/login"
-                            className="focus:border-avanti-light-green focus:ring-avanti-light-green flex h-full w-full items-center gap-[1ch] rounded-2xl focus:outline-none focus:ring-2"
+                            className="flex h-full w-full items-center gap-[1ch] rounded-2xl focus:border-avanti-light-green focus:outline-none focus:ring-2 focus:ring-avanti-light-green"
                         >
                             ¿Tienes una cuenta?
                             <span className="bg-gradient-avanti bg-clip-text font-bold text-transparent">
