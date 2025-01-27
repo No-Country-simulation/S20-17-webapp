@@ -9,7 +9,7 @@ export function LandingPageFooter() {
                     <div className="container mx-auto flex flex-col items-center px-5 py-6 sm:flex-row">
                         <a className="title-font flex items-center justify-center font-medium text-gray-900 md:justify-start">
                         <a className="title-font mb-4 flex items-center font-medium text-gray-900 md:mb-0">
-                        <img src="logo.png" alt="Logo de Avanti" />
+                        <img src="logo-2.png" alt="Logo de Avanti" />
                     </a>
                         </a>
                         <p className="mt-4 text-m font-semibold text-[#1F497D] sm:ml-6 sm:mt-0">

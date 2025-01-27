@@ -1,11 +1,11 @@
 export function LandingPageHeader() {
     return (
         <>
-            <div className="body-font text-gray-600">
+            <div className="body-font text-gray-600 h-16">
                 <div className="container mx-auto flex flex-col flex-wrap items-center  md:flex-row">
                     <a className="title-font mb-4 flex items-center font-medium text-gray-900 md:mb-0">
                     <a className="title-font mb-4 flex items-center font-medium text-gray-900 md:mb-0">
-                        <img src="logo-1.png" alt="Logo de Avanti" />
+                        <img src="logo-2.png" alt="Logo de Avanti" />
                     </a>
                     </a>
                     <nav className="flex flex-wrap items-center justify-center cursor-pointer md:ml-auto text-lg font-semibold text-[#121212]">
