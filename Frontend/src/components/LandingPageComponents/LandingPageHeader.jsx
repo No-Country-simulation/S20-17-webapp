@@ -22,13 +22,13 @@ export function LandingPageHeader() {
                     </nav>
                 </div>
             </div>
-            <header className="body-font bg-[#f2f2f2] text-gray-600">
+            <header className="body-font bg-avanti-white text-gray-600">
                 <div className="mx-auto flex flex-col flex-wrap items-center justify-around gap-8 p-5">
-                    <div className="relative">
+                    <div className="relative flex items-center">
                         <img
                             src="src/assets/avanti-icon-search.svg"
                             alt="icono de búsqueda"
-                            className="absolute bottom-2 left-2 ml-1 h-4 w-4"
+                            className="absolute left-2 ml-1 h-6 w-6"
                         />
                         <input
                             className="mt-4 inline-flex items-center rounded-xl border-0 bg-white px-16 py-2 text-base hover:bg-gray-200 focus:outline-none md:mt-0"
@@ -36,15 +36,15 @@ export function LandingPageHeader() {
                             placeholder="Search Crowdfunding"
                         />
                     </div>
-                    <nav className="flex cursor-pointer flex-wrap items-center justify-center text-lg font-semibold text-[#121212]">
-                        <Link className="mr-5 hover:text-[#1F497D]">First Link</Link>
-                        <Link className="mr-5 hover:text-[#1F497D]">Second Link</Link>
-                        <Link className="mr-5 hover:text-[#1F497D]">Third Link</Link>
-                        <Link className="mr-5 hover:text-[#1F497D]">Fourth Link</Link>
+                    <nav className="flex cursor-pointer flex-wrap items-center justify-center gap-4 text-lg font-semibold text-avanti-black">
+                        <Link className="min-h-12 min-w-20 hover:text-avanti-blue">First Link</Link>
+                        <Link className="min-h-12 min-w-20 hover:text-avanti-blue">Second Link</Link>
+                        <Link className="min-h-12 min-w-20 hover:text-avanti-blue">Third Link</Link>
+                        <Link className="min-h-12 min-w-20 hover:text-avanti-blue">Fourth Link</Link>
                     </nav>
                     <div className="flex items-center justify-center">
                         <div className="group relative">
-                            <button className="relative inline-block cursor-pointer rounded-xl bg-[#121212] p-px font-semibold leading-6 text-white shadow-2xl shadow-zinc-900 transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95">
+                            <button className="relative inline-block cursor-pointer rounded-xl bg-avanti-black p-px font-semibold leading-6 text-white shadow-2xl shadow-zinc-900 transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95">
                                 <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-teal-400 via-blue-500 to-purple-500 p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
 
                                 <span className="relative z-10 block rounded-xl bg-gray-950 px-6 py-3">
