@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom"
+import { SearchPage } from "../../pages/SearchPage/SearchPage"
 
 export function LandingPageHeader() {
     return (
         <>
             <div className="body-font h-20 text-black">
                 <div className="flex h-full flex-wrap justify-between p-4">
-                    <img src="src/assets/avanti-logo.svg" alt="Logo de Avanti" className="h-full" />
+                    <img src="/avanti-logo.svg" alt="Logo de Avanti" className="h-full" />
                     <nav className="mr-4 flex cursor-pointer flex-wrap items-center justify-center gap-4 text-lg font-semibold text-avanti-black">
                         <Link
                             to="./register"
@@ -37,7 +38,7 @@ export function LandingPageHeader() {
                         />
                     </div>
                     <nav className="flex cursor-pointer flex-wrap items-center justify-center gap-4 text-lg font-semibold text-avanti-black">
-                        <Link className="min-h-12 min-w-20 hover:text-avanti-blue">First Link</Link>
+                        <Link to="/" className="min-h-12 min-w-20 hover:text-avanti-blue">First Link</Link>
                         <Link className="min-h-12 min-w-20 hover:text-avanti-blue">Second Link</Link>
                         <Link className="min-h-12 min-w-20 hover:text-avanti-blue">Third Link</Link>
                         <Link className="min-h-12 min-w-20 hover:text-avanti-blue">Fourth Link</Link>
@@ -46,19 +47,20 @@ export function LandingPageHeader() {
                         <div className="group relative">
                             <button className="relative inline-block cursor-pointer rounded-xl bg-avanti-black p-px font-semibold leading-6 text-white shadow-2xl shadow-zinc-900 transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95">
                                 <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-teal-400 via-blue-500 to-purple-500 p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
-
-                                <span className="relative z-10 block rounded-xl bg-gray-950 px-6 py-3">
-                                    <div className="relative z-10 flex items-center space-x-2">
-                                        <span className="transition-all duration-500 group-hover:translate-x-1">
-                                            Start a Campaign
-                                        </span>
-                                        <img
-                                            src="src/assets/avanti-icon-chevron.svg"
-                                            alt="Icono empezar una campaña"
-                                            className="h-6 w-6 transition-transform duration-500 group-hover:translate-x-1"
-                                        />
-                                    </div>
-                                </span>
+                                <Link to="/searchPage">
+                                    <span className="relative z-10 block rounded-xl bg-gray-950 px-6 py-3">
+                                        <div className="relative z-10 flex items-center space-x-2">
+                                            <span className="transition-all duration-500 group-hover:translate-x-1">
+                                                Start a Campaign
+                                            </span>
+                                            <img
+                                                src="src/assets/avanti-icon-chevron.svg"
+                                                alt="Icono empezar una campaña"
+                                                className="h-6 w-6 transition-transform duration-500 group-hover:translate-x-1"
+                                            />
+                                        </div>
+                                    </span>
+                                </Link>
                             </button>
                         </div>
                     </div>
