@@ -2,8 +2,12 @@ import express from 'express';
 import {
     createCommentController,
     getCommentsByProjectController,
-    deleteCommentByIdController
+    deleteCommentByIdController,
+	updateCommentByIdController 
+
 } from '../controllers/commentController.js';
+
+import { authenticateUser } from "../middlewares/auth.js";
 
 const commentsRouter = express.Router();
 
@@ -18,7 +22,7 @@ const commentsRouter = express.Router();
 }
 *
 */
-commentsRouter.post('/', createCommentController );
+commentsRouter.post('/', authenticateUser, createCommentController );
 
 /*
 *
@@ -77,6 +81,22 @@ commentsRouter.get('/project/:projectId', getCommentsByProjectController);
 * - ID of de comment is required.
 *
 */
-commentsRouter.delete('/:commentId', deleteCommentByIdController);
+commentsRouter.delete('/:commentId', authenticateUser, deleteCommentByIdController);
+
+/*
+ * 
+ * Example: PATCH http://localhost:3000/comments/64f1b1e1b4c5d8a9f0e8f1a2/update
+ *
+ * 
+ * JSON Example:
+ *   {
+ *       "text": "This is the updated comment text"
+ *   }
+ * 
+ * - The user must be authenticated to perform this action.
+ * - Only the comment author can update it.
+ * - The "text" field is required in the request body.
+ */
+commentsRouter.patch('/:commentId/update', authenticateUser, updateCommentByIdController);
 
 export default commentsRouter;

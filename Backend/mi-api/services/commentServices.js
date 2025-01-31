@@ -95,12 +95,23 @@ export const getCommentsByProject = async ( projectId, authorName) => {
  * @returns {Object} - An object that includes a success message and the ID of the deleted comment.
  * 
  */
-export const deleteCommentByID = async (commentId) => {
+export const deleteCommentByID = async (commentId, author) => {
     try {
+        console.log('ser ', author);
         const comment = await Comment.findById(commentId);
 
         if(!comment){
             throw new Error('No se encontró el comentario con el ID proporcionado.');
+        }
+
+        const user = await User.findById(author);
+
+        if (!user) {
+            throw new Error('Usuario no encontrado.');
+        }
+
+        if (comment.author.toString() !== author && user.role !== 'admin') {
+            throw new Error('No tienes permiso para eliminar este comentario.');
         }
 
         await Comment.findByIdAndDelete(commentId);
@@ -115,7 +126,34 @@ export const deleteCommentByID = async (commentId) => {
     }
 }
 
-/**
- * PENDING updateCommentByID because it needs log and user._id from logged in user
- */
 
+export const updateCommentByID = async (data) => {
+    try {
+        const {
+            commentId, 
+            text,
+            author
+        } = data; 
+
+        if (!commentId || !text){
+            throw new Error('Falta completar algunos campos.');
+        }
+
+        const comment = await Comment.findById(commentId);
+        if(!comment){
+            throw new Error('No se encontró ningún comentario con el ID proporcionado.');
+        }
+
+        if(comment.author.ToString() !== author){
+            throw new Error('No tienes permiso para modificar este comentario.');
+        }
+
+        comment.text = text;
+        await comment.save();
+
+        return comment;
+    } catch (error) {
+        console.error('Error al actualziar los comentarios', error);
+        throw new Error('No se pueden actualizar los comentarios. ' + error.message);
+    }
+}

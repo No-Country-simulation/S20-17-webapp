@@ -1,7 +1,8 @@
 import {
     createComment,
     getCommentsByProject,
-    deleteCommentByID
+    deleteCommentByID,
+    updateCommentByID
 } from "../services/commentServices.js";
 
 /**
@@ -22,9 +23,16 @@ export const createCommentController = async (req, res) => {
     try {
         const {
             text,
-            author,
              project
             } = req.body;
+        
+        const author = req.user?.id;
+        if (!author) {
+            return res.status(401).json({
+              message: "No estás autenticado",
+              success: false,
+            });
+          }
 
         const newComment = await createComment({ 
             text,
@@ -86,8 +94,40 @@ export const getCommentsByProjectController = async (req, res) => {
 export const deleteCommentByIdController = async (req, res) =>{
     try {
         const {commentId} = req.params;
+        const author = req.user?.id;
+
+        if (!author) {
+            return res.status(401).json({
+              message: "No estás autenticado",
+              success: false,
+            });
+          }
         
-        const result = await deleteCommentByID(commentId);
+        const result = await deleteCommentByID(commentId, author);
+
+        return res.status(200).json(result);
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({
+            message: error.message
+        });
+    }
+}
+
+export const updateCommentByIdController = async (req, res) => {
+    try {
+        const {commentId} = req.params;
+        const {text} = req.body;
+        const author = req.user?.id;
+        
+        if (!author) {
+            return res.status(401).json({
+              message: "No estás autenticado",
+              success: false,
+            });
+          }
+
+        const result = updateCommentByID(commentId, text, author);
 
         return res.status(200).json(result);
     } catch (error) {
