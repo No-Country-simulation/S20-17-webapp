@@ -8,4 +8,6 @@ const contributionSchema = new mongoose.Schema({
     contributionDate: {type: Date, default: Date.now},
 });
 
-export const Contribution = mongoose.model('Contribution', contributionSchema);
+const Contribution = mongoose.model('Contribution', contributionSchema);
+
+export default Contribution;
