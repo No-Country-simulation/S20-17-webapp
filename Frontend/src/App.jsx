@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { ErrorPage, LandingPage, UserLoginPage, UserRegisterPage, WIPPage } from "./pages"
+import { SearchPage } from "./pages/SearchPage/SearchPage"
 
 function App() {
     return (
@@ -7,6 +8,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<LandingPage />} />
                 <Route path="/search" element={<WIPPage />} />
+                <Route path="/searchPage" element={<SearchPage />} />
                 <Route path="/proyect/:proyectId" element={<WIPPage />} />
                 <Route path="/checkout/:proyectId" element={<WIPPage />} />
                 <Route path="/login" element={<UserLoginPage />} />
