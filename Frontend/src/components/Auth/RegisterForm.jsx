@@ -12,26 +12,38 @@ export function RegisterForm() {
 
     const [registerInProcess, setRegisterInProcess] = useState(false)
 
-    const sendData = (data) => {
+    const sendData = async (data) => {
+        setRegisterInProcess(true)
+
         const PAYLOAD = {
             name: data.name,
             email: data.email,
             password: data.password,
         }
 
-        console.log(JSON.stringify(PAYLOAD))
-        setRegisterInProcess(false)
+        try {
+            const registerResponse = await fetch(
+                import.meta.env.VITE_BACK_BASE_DEV_URL + import.meta.env.VITE_BACK_USER_REGISTER_URL,
+                {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(PAYLOAD),
+                },
+            )
+
+            const registerData = await registerResponse.json()
+
+            // Just for testing
+            console.log(registerData)
+        } catch (error) {
+            console.error("Error en el registro del usuario.", error)
+        } finally {
+            setRegisterInProcess(false)
+        }
     }
 
     return (
-        <form
-            className="flex w-full flex-col items-center"
-            id="registerForm"
-            onSubmit={handleSubmit((data) => {
-                setRegisterInProcess(true)
-                setTimeout(() => sendData(data), 2000)
-            })}
-        >
+        <form className="flex w-full flex-col items-center" id="registerForm" onSubmit={handleSubmit(sendData)}>
             <input
                 id="registerFormName"
                 type="text"
