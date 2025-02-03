@@ -23,7 +23,7 @@ export function RegisterForm() {
 
         try {
             const registerResponse = await fetch(
-                import.meta.env.VITE_BACK_BASE_DEV_URL + import.meta.env.VITE_BACK_USER_REGISTER_URL,
+                import.meta.env.VITE_BACK_BASE_URL + import.meta.env.VITE_BACK_USER_REGISTER_URL,
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },

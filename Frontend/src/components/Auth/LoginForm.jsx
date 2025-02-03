@@ -20,7 +20,7 @@ export function LoginForm() {
 
         try {
             const loginResponse = await fetch(
-                import.meta.env.VITE_BACK_BASE_DEV_URL + import.meta.env.VITE_BACK_USER_LOGIN_URL,
+                import.meta.env.VITE_BACK_BASE_URL + import.meta.env.VITE_BACK_USER_LOGIN_URL,
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
