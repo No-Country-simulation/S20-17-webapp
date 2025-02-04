@@ -1,3 +1,11 @@
+import { CheckoutFooter, CheckoutFormContainer, CheckoutHeader } from "../../components"
+
 export function CheckoutPage() {
-    return <div>CheckoutPage</div>
+    return (
+        <>
+            <CheckoutHeader />
+            <CheckoutFormContainer />
+            <CheckoutFooter />
+        </>
+    )
 }
