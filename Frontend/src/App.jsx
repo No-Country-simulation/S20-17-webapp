@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { CheckoutPage, ErrorPage, LandingPage, UserLoginPage, UserRegisterPage, WIPPage } from "./pages"
-import { SearchPage } from "./pages/SearchPage/SearchPage"
+import { CheckoutPage, ErrorPage, LandingPage, SearchPage, UserLoginPage, UserRegisterPage, WIPPage } from "./pages"
 
 function App() {
     return (
