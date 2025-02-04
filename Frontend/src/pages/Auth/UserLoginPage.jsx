@@ -5,7 +5,14 @@ export function UserLoginPage() {
     return (
         <div className="grid min-h-screen w-full grid-rows-[1fr_8fr_1fr] items-center text-white">
             <AuthHeader />
-            <main className="grid h-full place-items-center bg-[url(./auth-background-image.webp)]">
+            <main
+                className="grid h-full place-items-center"
+                style={{
+                    backgroundImage: "url('./auth-background-image.webp')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                }}
+            >
                 {/* Background image provided by Mego-studio in freepik.com - https://www.freepik.com/free-photo/manager-woman-leading-brainstorming-meeting_9812487.htm#fromView=search&page=1&position=39&uuid=990df427-b95b-4dd8-8baa-3e70bbe75f1c&new_detail=true&query=brainstorming */}
                 <div className="m-4 flex flex-col gap-4 rounded-6xl border-2 border-solid border-avanti-black bg-[rgba(255,255,255,0.6)] p-8 text-black shadow-lg backdrop-blur-lg">
                     <h1 className="mx-auto">Inicia sesión en Avanti</h1>
