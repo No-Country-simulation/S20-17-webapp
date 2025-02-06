@@ -74,7 +74,7 @@ export function SearchPageContent() {
                                             {card.title}
                                         </h1>
                                         <p className="mb-3 leading-relaxed">{card.description}</p>
-                                        <Link to="/" className="flex flex-wrap items-center">
+                                        <Link to={`/project/${card._id}`} className="flex flex-wrap items-center">
                                             <a className="inline-flex cursor-pointer items-center text-[#1F497D] hover:text-[#121212] md:mb-2 lg:mb-0">
                                                 Ver más sobre este proyecto
                                                 <svg

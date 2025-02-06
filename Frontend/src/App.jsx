@@ -1,5 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { CheckoutPage, ErrorPage, LandingPage, SearchPage, UserLoginPage, UserRegisterPage, WIPPage } from "./pages"
+import {
+    CheckoutPage,
+    DetailsPage,
+    ErrorPage,
+    LandingPage,
+    SearchPage,
+    UserLoginPage,
+    UserRegisterPage,
+    WIPPage,
+} from "./pages"
 
 function App() {
     return (
@@ -8,7 +17,7 @@ function App() {
                 <Route path="/" element={<LandingPage />} />
                 <Route path="/search" element={<WIPPage />} />
                 <Route path="/searchPage" element={<SearchPage />} />
-                <Route path="/proyect/:proyectId" element={<WIPPage />} />
+                <Route path="/project/:projectId" element={<DetailsPage />} />
                 {/* <Route path="/checkout/:proyectId" element={<CheckoutPage />} /> */}
                 <Route path="/checkout" element={<CheckoutPage />} />
                 <Route path="/login" element={<UserLoginPage />} />
