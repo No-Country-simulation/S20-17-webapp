@@ -32,7 +32,7 @@ export function CheckoutForm() {
             donator: "donadorDefault",
             project: "IdDelProyecto",
             paymentMethod: "card",
-            paymentAmmount: "10",
+            paymentAmount: "10",
         }
 
         try {
