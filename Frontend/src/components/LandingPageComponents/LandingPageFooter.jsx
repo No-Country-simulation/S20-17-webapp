@@ -48,7 +48,7 @@ export function LandingPageFooter() {
                 {/* Sección superior con logo y texto */}
                 <div className="flex w-full items-center justify-between">
                     <figure className="flex items-center">
-                        <img src="src/assets/avanti-logo.svg" alt="Logo de Avanti" className="h-[60px]" />
+                        <img src="/avanti-logo-footer.svg" alt="Logo de Avanti" className="h-[60px]" />
                     </figure>
                     <p className="text-xl font-semibold text-avanti-white">© 2025 Avanti</p>
                 </div>
@@ -60,14 +60,10 @@ export function LandingPageFooter() {
                         <p className="text-lg font-bold text-avanti-white">Enlaces rápidos</p>
                         <ul className="flex flex-col gap-2">
                             <li>
-                                <Link className="text-avanti-white hover:text-avanti-light-green">
-                                    Sobre nosotros
-                                </Link>
+                                <Link className="text-avanti-white hover:text-avanti-light-green">Sobre nosotros</Link>
                             </li>
                             <li>
-                                <Link className="text-avanti-white hover:text-avanti-light-green">
-                                    Contacto
-                                </Link>
+                                <Link className="text-avanti-white hover:text-avanti-light-green">Contacto</Link>
                             </li>
                             <li>
                                 <Link className="text-avanti-white hover:text-avanti-light-green">
@@ -90,7 +86,11 @@ export function LandingPageFooter() {
                                 target="blank"
                                 rel="noopener noreferrer"
                             >
-                                <img src="src/assets/facebook-logo.svg" alt="Logo de Facebook" className="h-7 w-7 transition-all duration-300 ease-in-out hover:blur-[2px]" />
+                                <img
+                                    src="/facebook-logo.svg"
+                                    alt="Logo de Facebook"
+                                    className="h-7 w-7 transition-all duration-300 ease-in-out hover:blur-[2px]"
+                                />
                             </Link>
                             <Link
                                 className="text-avanti-white"
@@ -98,7 +98,11 @@ export function LandingPageFooter() {
                                 target="blank"
                                 rel="noopener noreferrer"
                             >
-                                <img src="src/assets/x-logo.svg" alt="Logo de X / Twitter" className="h-7 w-7 transition-all duration-300 ease-in-out hover:blur-[2px]" />
+                                <img
+                                    src="/x-logo.svg"
+                                    alt="Logo de X / Twitter"
+                                    className="h-7 w-7 transition-all duration-300 ease-in-out hover:blur-[2px]"
+                                />
                             </Link>
                             <Link
                                 className="text-avanti-white"
@@ -106,7 +110,11 @@ export function LandingPageFooter() {
                                 target="blank"
                                 rel="noopener noreferrer"
                             >
-                                <img src="src/assets/instagram-logo.svg" alt="Logo de Instagram" className="h-7 w-7 transition-all duration-300 ease-in-out hover:blur-[2px]" />
+                                <img
+                                    src="/instagram-logo.svg"
+                                    alt="Logo de Instagram"
+                                    className="h-7 w-7 transition-all duration-300 ease-in-out hover:blur-[2px]"
+                                />
                             </Link>
                         </div>
                     </div>
