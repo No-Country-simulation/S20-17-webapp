@@ -7,7 +7,6 @@ export function CheckoutForm() {
         register,
         handleSubmit,
         formState: { errors },
-        watch,
     } = useForm()
 
     const [paymentInProcess, setPaymentInProcess] = useState(false)
@@ -16,9 +15,10 @@ export function CheckoutForm() {
         setPaymentInProcess(true)
 
         const PAYLOAD = {
-            name: data.name,
-            email: data.email,
-            password: data.password,
+            ammount: data.ammount,
+            cardNumber: data.cardNumber,
+            cardExpirationDate: data.cardExpirationDate,
+            cardCVC: data.cardCVC,
         }
 
         try {
@@ -44,47 +44,87 @@ export function CheckoutForm() {
 
     return (
         <form className="flex w-full flex-col items-center" id="paymentForm" onSubmit={handleSubmit(sendData)}>
+            <label htmlFor="paymentAmmount" className="mb-3 w-full rounded-2xl px-3">
+                Monto a pagar (en $)
+            </label>
             <input
-                id="paymentFormName"
+                id="paymentAmmount"
                 type="text"
-                placeholder="Nombre"
+                inputMode="numeric"
+                prefix="$"
+                placeholder="10"
                 autoComplete="true"
-                {...register("name", { required: true, maxLength: 255 })}
+                {...register("ammount", { required: true, maxLength: 255 })}
                 className="mb-3 w-full rounded-2xl border border-avanti-black p-3 focus:border-avanti-light-green focus:outline-none focus:ring-2 focus:ring-avanti-light-green"
             />
-            {errors.name && errors.name.type === "required" && (
+            {errors.cardNumber && errors.cardNumber.type === "required" && (
                 <span role="alert" className="mb-3 w-full px-3 font-bold text-avanti-red">
-                    Debes escribir un nombre
+                    Debes escribir el número de tarjeta
                 </span>
             )}
+            <label htmlFor="paymentCardNumber" className="mb-3 w-full rounded-2xl px-3">
+                Número de tarjeta
+            </label>
             <input
-                id="paymentFormEmail"
-                type="email"
-                placeholder="Correo electrónico"
+                id="paymentCardNumber"
+                type="text"
+                inputMode="numeric"
+                placeholder="1234 1234 1234"
                 autoComplete="true"
-                {...register("email", { required: true, pattern: regexFormPatterns.email, maxLength: 255 })}
+                {...register("cardNumber", { required: true, maxLength: 255 })}
                 className="mb-3 w-full rounded-2xl border border-avanti-black p-3 focus:border-avanti-light-green focus:outline-none focus:ring-2 focus:ring-avanti-light-green"
             />
-            {errors.email && errors.email.type === "pattern" && (
+            {errors.cardNumber && errors.cardNumber.type === "required" && (
                 <span role="alert" className="mb-3 w-full px-3 font-bold text-avanti-red">
-                    Debes escribir un correo electrónico
+                    Debes escribir el número de tarjeta
                 </span>
             )}
+            <label htmlFor="paymentCardExpirationDate" className="mb-3 w-full rounded-2xl px-3">
+                Fecha de vencimiento
+            </label>
             <input
-                {...register("emailConfirmation")}
-                id="paymentFormEmailConfirmation"
+                id="paymentCardExpirationDate"
                 type="email"
-                placeholder="Confirmar correo electrónico"
-                {...register("emailConfirmation", { required: true, validate: (value) => watch("email") === value })}
+                placeholder="MM / AA"
+                autoComplete="true"
+                {...register("cardExpirationDate", {
+                    required: true,
+                    pattern: regexFormPatterns.email,
+                    maxLength: 255,
+                })}
                 className="mb-3 w-full rounded-2xl border border-avanti-black p-3 focus:border-avanti-light-green focus:outline-none focus:ring-2 focus:ring-avanti-light-green"
             />
-            {errors.emailConfirmation && errors.emailConfirmation.type === "validate" && (
+            {errors.cardExpirationDate && errors.cardExpirationDate.type === "pattern" && (
                 <span role="alert" className="mb-3 w-full px-3 font-bold text-avanti-red">
-                    Los correos electrónicos no coinciden
+                    Debes escribir una fecha de expiración
+                </span>
+            )}
+            <label htmlFor="paymentCardCVC" className="mb-3 w-full rounded-2xl px-3">
+                Código de seguridad
+            </label>
+            <input
+                id="paymentCardCVC"
+                type="email"
+                placeholder="CVC"
+                autoComplete="true"
+                {...register("cardCVC", {
+                    required: true,
+                    pattern: regexFormPatterns.email,
+                    maxLength: 255,
+                })}
+                className="mb-3 w-full rounded-2xl border border-avanti-black p-3 focus:border-avanti-light-green focus:outline-none focus:ring-2 focus:ring-avanti-light-green"
+            />
+            {errors.cardExpirationDate && errors.cardExpirationDate.type === "pattern" && (
+                <span role="alert" className="mb-3 w-full px-3 font-bold text-avanti-red">
+                    Debes escribir una fecha de expiración
                 </span>
             )}
             <div className="mb-3 flex min-h-12 w-full min-w-12 items-center gap-4 rounded-2xl p-3 focus:border-avanti-light-green focus:outline-none focus:ring-2 focus:ring-avanti-light-green">
-                <input type="checkbox" className="min-h-8 min-w-8" />
+                <input
+                    type="checkbox"
+                    className="appeareance-none min-h-8 checked:bg-avanti-green"
+                    defaultChecked="true"
+                />
                 <span>Recordar información de pago</span>
             </div>
             <button
