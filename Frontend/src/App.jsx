@@ -10,7 +10,7 @@ function App() {
                 <Route path="/searchPage" element={<SearchPage />} />
                 <Route path="/proyect/:proyectId" element={<WIPPage />} />
                 {/* <Route path="/checkout/:proyectId" element={<CheckoutPage />} /> */}
-                <Route path="/checkout/" element={<CheckoutPage />} />
+                <Route path="/checkout" element={<CheckoutPage />} />
                 <Route path="/login" element={<UserLoginPage />} />
                 <Route path="/register" element={<UserRegisterPage />} />
                 <Route path="/about" element={<WIPPage />} />
