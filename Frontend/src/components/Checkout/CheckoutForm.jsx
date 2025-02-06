@@ -1,8 +1,11 @@
 import { useState } from "react"
 import { useForm } from "react-hook-form"
-import { regexFormPatterns } from "../../utils/regex.js"
+import { useNavigate } from "react-router-dom"
+import Swal from "sweetalert2"
 
 export function CheckoutForm() {
+    const navigateTo = useNavigate()
+
     const {
         register,
         handleSubmit,
@@ -53,6 +56,12 @@ export function CheckoutForm() {
             console.error("Error en la acreditación del pago.", error)
         } finally {
             setPaymentInProcess(false)
+            Swal.fire({
+                title: "Datos de pago registrados correctamente!",
+                text: "Te notificaremos al email cuando se acredite el pago!",
+                icon: "success",
+                confirmButtonText: "Genial! volver al inicio.",
+            }).then(() => navigateTo("/"))
         }
     }
 
