@@ -1,12 +1,11 @@
-import { LandingPageHeader } from "../../components";
-import { SearchPageContent } from "../../components/SearchPageComponents";
-
+import { LandingPageHeader, LandingPageFooter, SearchPageContent } from "../../components"
 
 export function SearchPage() {
     return (
         <>
-        <LandingPageHeader />
-        <SearchPageContent />
+            <LandingPageHeader />
+            <SearchPageContent />
+            <LandingPageFooter />
         </>
     )
 }
