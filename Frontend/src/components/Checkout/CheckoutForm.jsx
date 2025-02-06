@@ -7,7 +7,14 @@ export function CheckoutForm() {
         register,
         handleSubmit,
         formState: { errors },
-    } = useForm()
+    } = useForm({
+        defaultValues: {
+            ammount: "10",
+            cardNumber: "1234 1234 1234 1234",
+            cardExpirationDate: "12/26",
+            cardCVC: "123",
+        },
+    })
 
     const [paymentInProcess, setPaymentInProcess] = useState(false)
 
@@ -21,13 +28,20 @@ export function CheckoutForm() {
             cardCVC: data.cardCVC,
         }
 
+        const FAKE_PAYLOAD = {
+            donator: "donadorDefault",
+            project: "IdDelProyecto",
+            paymentMethod: "card",
+            paymentAmmount: "10",
+        }
+
         try {
             const paymentResponse = await fetch(
-                import.meta.env.VITE_BACK_BASE_URL + import.meta.env.VITE_BACK_USER_REGISTER_URL,
+                import.meta.env.VITE_BACK_BASE_URL + import.meta.env.VITE_BACK_CONTRIBUTIONS_CREATE_URL,
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify(PAYLOAD),
+                    body: JSON.stringify(FAKE_PAYLOAD),
                 },
             )
 
@@ -49,9 +63,10 @@ export function CheckoutForm() {
             </label>
             <input
                 id="paymentAmmount"
-                type="text"
+                type="number"
                 inputMode="numeric"
                 prefix="$"
+                min={1}
                 placeholder="10"
                 autoComplete="true"
                 {...register("ammount", { required: true, maxLength: 255 })}
@@ -84,12 +99,11 @@ export function CheckoutForm() {
             </label>
             <input
                 id="paymentCardExpirationDate"
-                type="email"
+                type="text"
                 placeholder="MM / AA"
                 autoComplete="true"
                 {...register("cardExpirationDate", {
                     required: true,
-                    pattern: regexFormPatterns.email,
                     maxLength: 255,
                 })}
                 className="mb-3 w-full rounded-2xl border border-avanti-black p-3 focus:border-avanti-light-green focus:outline-none focus:ring-2 focus:ring-avanti-light-green"
@@ -104,12 +118,11 @@ export function CheckoutForm() {
             </label>
             <input
                 id="paymentCardCVC"
-                type="email"
+                type="text"
                 placeholder="CVC"
                 autoComplete="true"
                 {...register("cardCVC", {
                     required: true,
-                    pattern: regexFormPatterns.email,
                     maxLength: 255,
                 })}
                 className="mb-3 w-full rounded-2xl border border-avanti-black p-3 focus:border-avanti-light-green focus:outline-none focus:ring-2 focus:ring-avanti-light-green"
