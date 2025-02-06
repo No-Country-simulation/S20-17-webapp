@@ -1,4 +1,4 @@
-import { Project } from "../models/Project.js";
+import  Project  from "../models/Project.js";
 import mongoose from "mongoose";
 
 export const getAllProjects = async (req, res) => {
