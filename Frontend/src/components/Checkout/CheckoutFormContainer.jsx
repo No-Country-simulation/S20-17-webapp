@@ -2,14 +2,13 @@ import { Link } from "react-router-dom"
 import { CheckoutForm } from "./CheckoutForm"
 
 export function CheckoutFormContainer() {
-    const USER_LOGIN = JSON.parse(localStorage.getItem("userLogin")).user
-    console.log(USER_LOGIN)
+    const USER_LOGIN = JSON.parse(localStorage.getItem("userLogin"))?.user
 
     return (
         <main
             className="grid min-h-[calc(100vh-5rem)] place-items-center p-4"
             style={{
-                backgroundImage: "url('./auth-background-image.webp')",
+                backgroundImage: "url('/auth-background-image.webp')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
             }}
@@ -18,11 +17,11 @@ export function CheckoutFormContainer() {
             <div className="m-4 flex min-w-96 max-w-md flex-col gap-4 rounded-6xl border-2 border-solid border-avanti-black bg-[rgba(255,255,255,0.6)] p-8 text-black shadow-lg backdrop-blur-lg">
                 <h1 className="mx-auto font-bold">Realizar una donación a un proyecto</h1>
                 <p>
-                    Estimado <span className="font-mono font-bold"> {USER_LOGIN.name}</span>, por ahora no le vamos a
-                    cobrar nada. Si el proyecto llega a la meta de financiamiento, te vamos a debitar el pago de tu
-                    tarjeta cuando termine la campaña. Le va a llegar un mail de confirmación a{" "}
-                    <span className="font-mono font-bold"> {USER_LOGIN.email}</span> cuando el pago se haya procesado
-                    bien.
+                    Estimado <span className="font-mono font-bold"> {USER_LOGIN?.name ?? "Juan Perez"}</span>, por ahora
+                    no le vamos a cobrar nada. Si el proyecto llega a la meta de financiamiento, te vamos a debitar el
+                    pago de tu tarjeta cuando termine la campaña. Le va a llegar un mail de confirmación a{" "}
+                    <span className="font-mono font-bold"> {USER_LOGIN?.email ?? "perez.juan@gmail.com"}</span> cuando
+                    el pago se haya procesado bien.
                 </p>
                 <CheckoutForm />
                 <p className="mb-4 grid min-h-12 min-w-12 place-items-center">
