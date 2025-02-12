@@ -29,7 +29,7 @@ export function ProjectDetailsContent() {
     }, [projectId])
 
     return (
-        <main className="grid h-full place-items-center">
+        <main className="grid min-h-[calc(100svh-15rem)] place-items-center">
             <div className="m-4 flex min-w-96 flex-col gap-4 rounded-6xl border-2 border-solid border-avanti-black bg-[rgba(255,255,255,0.6)] p-8 text-black shadow-lg backdrop-blur-lg">
                 <h1 className="mx-auto font-bold">{project?.title}</h1>
                 <div className="flex items-center gap-4">
