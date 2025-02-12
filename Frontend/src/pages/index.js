@@ -1,5 +1,6 @@
 export * from "./Auth"
 export * from "./Checkout"
+export * from "./DetailsPage"
 export * from "./ErrorPage"
 export * from "./LandingPage"
 export * from "./SearchPage"

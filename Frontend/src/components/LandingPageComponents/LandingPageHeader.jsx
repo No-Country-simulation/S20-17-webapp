@@ -16,8 +16,11 @@ export function LandingPageHeader() {
                                 Registro
                             </button>
                         </Link>
-                        <Link to="/login" className="grid min-h-12 min-w-20 place-items-center rounded-2xl">
-                            <button className="relative z-30 overflow-hidden rounded-md bg-avanti-blue px-4 py-1 font-semibold text-white transition-all duration-700 after:absolute after:bottom-0 after:left-5 after:-z-20 after:h-1 after:w-1 after:translate-y-full after:rounded-md after:bg-avanti-red after:transition-all after:duration-700 after:hover:scale-[300] after:hover:transition-all after:hover:duration-700">
+                        <Link
+                            to="./login"
+                            className="grid min-h-12 min-w-20 place-items-center rounded-2xl"
+                        >
+                            <button className="px-4 z-30 py-1 bg-avanti-blue rounded-md text-white relative font-semibold after:-z-20 after:absolute after:h-1 after:w-1 after:bg-avanti-red after:left-5 overflow-hidden after:bottom-0 after:translate-y-full after:rounded-md after:hover:scale-[300] after:hover:transition-all after:hover:duration-700 after:transition-all after:duration-700 transition-all duration-700">
                                 Login
                             </button>
                         </Link>
@@ -40,7 +43,7 @@ export function LandingPageHeader() {
                             className="absolute left-2 ml-1 h-6 w-6"
                         />
                         <input
-                            className="mt-4 inline-flex items-center rounded-xl border-0 bg-white px-16 py-2 text-base hover:bg-gray-200 focus:outline-none md:mt-0"
+                            className="mt-4 inline-flex items-center px-16 py-2 text-base border-avanti-black focus:border-avanti-light-green focus:ring-avanti-light-green mb-3 w-full rounded-2xl border focus:outline-none focus:ring-2"
                             type="text"
                             placeholder="Buscar Crowdfunding"
                         />

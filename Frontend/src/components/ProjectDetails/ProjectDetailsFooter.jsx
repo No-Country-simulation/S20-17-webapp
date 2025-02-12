@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import React, { useState, useEffect } from "react"
+import { useState, useEffect } from "react"
 
 const TestimonialSlider = () => {
     // Testimonios a mostrar
@@ -33,13 +33,13 @@ const TestimonialSlider = () => {
     )
 }
 
-export function LandingPageFooter() {
+export function ProjectDetailsFooter() {
     return (
         <>
             <footer
                 className="body-font flex w-full flex-col items-center bg-avanti-blue p-8 text-white"
                 style={{
-                    backgroundImage: "url('./public/bg.png')",
+                    backgroundImage: "url('/bg.png')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundBlendMode: "overlay",
