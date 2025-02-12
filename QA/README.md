@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 # Objetivos de QA:
 
 * Asegurar que todas las funcionalidades del producto cumplen con los requisitos establecidos.
@@ -16,4 +13,3 @@
 - [Pruebas de apis.](https://1drv.ms/w/c/3aa28a9eb8e37418/EQwOLpaL9a1MlPsvT-m_XRUBc10zmizUoqkVjhLw9LNd-A)
 - [Casos de prueba para apis.]()
 - [Recomendaciones.](https://1drv.ms/w/c/3aa28a9eb8e37418/Ef8VTpOlpI1InNt87QNkhdMBmD5_x5YXyhLauJXIzvdQZg)
->>>>>>> f107d0d4d1661418232280763d49e322b6ed7074
