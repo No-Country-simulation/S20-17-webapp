@@ -5,12 +5,12 @@
     <table align="center">
         <tr>
             <td><b>Federico Correa</b></td>
-            <td>Frontend</td>
+            <td>Frontend Developer</td>
             <td align="center"><a href="https://github.com/Fede-Correa">@Fede-Correa</a></td>
         </tr>
         <tr>
             <td><b>David Ezequiel De Vito</b></td>
-            <td>Backend</td>
+            <td>LEAD Backend Developer</td>
             <td align="center"><a href="https://github.com/DavidDeVito2001">@DavidDeVito2001</a></td>
         </tr>
         <tr>
@@ -24,23 +24,18 @@
             <td align="center"><a href="https://github.com/CarolinaLucero23">@CarolinaLucero23</a></td>
         </tr>
         <tr>
-            <td><b>Elvin Moreno</b></td>
-            <td>Frontend</td>
-            <td align="center"><a href="https://github.com/ElvinMoreno">@ElvinMoreno</a></td>
-        </tr>
-        <tr>
             <td><b>Ian Oliva</b></td>
-            <td>Backend</td>
+            <td>Backend Developer</td>
             <td align="center"><a href="https://github.com/IanOliva">@IanOliva</a></td>
         </tr>
         <tr>
             <td><b>Ámbar Ramón</b></td>
-            <td>LEAD QA</td>
+            <td>LEAD QA Tester</td>
             <td align="center"><a href="https://github.com/Lofas007">@Lofas007</a></td>
         </tr>
         <tr>
             <td><b>Ian Sosa</b></td>
-            <td>Frontend</td>
+            <td>LEAD Frontend Developer</td>
             <td align="center"><a href="https://github.com/sosaian">@sosaian</a></td>
         </tr>
     </table>
